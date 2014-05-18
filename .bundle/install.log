@@ -1,0 +1,8 @@
+# Logfile created on 2014-05-17 20:25:22 -0400 by logger.rb/41954
+I, [2014-05-17T20:25:22.481266 #6153]  INFO -- : 0:  rake (10.0.4) from /Users/wart/.rvm/gems/ruby-2.1.0/specifications/rake-10.0.4.gemspec
+I, [2014-05-17T20:25:23.006031 #6153]  INFO -- : 0:  addressable (2.3.3) from /Users/wart/.rvm/gems/ruby-2.1.0/specifications/addressable-2.3.3.gemspec
+I, [2014-05-17T20:25:23.444116 #6153]  INFO -- : 0:  launchy (2.2.0) from /Users/wart/.rvm/gems/ruby-2.1.0/specifications/launchy-2.2.0.gemspec
+I, [2014-05-17T20:25:25.931040 #6153]  INFO -- : 0:  redcarpet (2.2.2) from /Users/wart/.rvm/gems/ruby-2.1.0/specifications/redcarpet-2.2.2.gemspec
+I, [2014-05-17T20:25:26.464246 #6153]  INFO -- : 0:  trollop (2.0) from /Users/wart/.rvm/gems/ruby-2.1.0/specifications/trollop-2.0.gemspec
+I, [2014-05-17T20:25:27.101230 #6153]  INFO -- : 0:  mdpress (0.0.12) from /Users/wart/.rvm/gems/ruby-2.1.0/specifications/mdpress-0.0.12.gemspec
+I, [2014-05-17T20:25:27.101568 #6153]  INFO -- : 0:  bundler (1.5.1) from /Users/wart/.rvm/gems/ruby-2.1.0@global/specifications/bundler-1.5.1.gemspec
