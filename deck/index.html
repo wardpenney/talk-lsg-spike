@@ -47,7 +47,430 @@
     <div id="impress">
     <div class='step' >
     
-<p>g</p>
+<h1>Rapid Design Exploration with Live Style Guides</h1>
+</div>
+      <div class='step' >
+    
+<h1>Hello</h1>
+
+<ul>
+<li>I&#39;m Ward Penney</li>
+<li>Product Designer at Pivotal Labs, focusing on front-end development and user centered design</li>
+<li>I love SASS</li>
+</ul>
+</div>
+      <div class='step' >
+    
+<h1>Background</h1>
+
+<p>In the last year, I&#39;ve been on several projects focused on the front-end, and I have developed a fondness for Live Style Guides that isn&#39;t what it used to be. In fact, I&#39;ve used them in two primary ways, and one (hopefully) upcoming way. </p>
+</div>
+      <div class='step' >
+    
+<h1>Quick: what is Live Style Guide?</h1>
+</div>
+      <div class='step' >
+    
+<h1>Original reasons (still good reasons)</h1>
+
+<ul>
+<li>A webpage that describes the typography, colors, patterns and widgets for a website</li>
+<li>The system-of-record for front-end names of patterns and styles</li>
+<li>Code examples for engineers to implement swiftly</li>
+</ul>
+</div>
+      <div class='step' >
+    
+<h1>3 new reasons</h1>
+
+<p>Which I&#39;ll get into shortly...</p>
+</div>
+      <div class='step' >
+    
+<h1>How many of you heard of a Spike?</h1>
+</div>
+      <div class='step' >
+    
+<p>“I would often ask Kent [Beck], ‘What is the simplest thing we can program that will convince us we are on the right track?’ Such stepping outside the difficulties at hand often led us to simpler and more compelling solutions. Kent dubbed this a Spike.” <em>Ward Cunningham</em></p>
+</div>
+      <div class='step' >
+    
+<h1>A few key phrases</h1>
+
+<ul>
+<li>&quot;the simplest thing&quot;</li>
+<li>&quot;stepping outside&quot;</li>
+<li>&quot;compelling solutions&quot;</li>
+</ul>
+</div>
+      <div class='step' >
+    
+<h1>Well, we spike in web design, too</h1>
+
+<ul>
+<li>What if we put in a responsive grid?</li>
+<li>What can we do to clean up those modals?</li>
+<li>Can we make that slider easier on touch for mobile users?</li>
+<li>Yep. I&#39;m gonna take two hours and try a fancy sparkle-effect on the avatars. That&#39;s right.</li>
+</ul>
+</div>
+      <div class='step' >
+    
+<h1>What does all this have in common?</h1>
+
+<ol>
+<li>The cost is low</li>
+<li>The feedback loop is fast</li>
+<li>And, we might throw it away</li>
+</ol>
+</div>
+      <div class='step' >
+    
+<h1>Reason #1</h1>
+
+<p>It&#39;s the perfect place to spike something new, and see if it&#39;s reasonably possible</p>
+</div>
+      <div class='step' >
+    
+<h1>Low execution cost</h1>
+
+<p>It is important your Live Style Guide keeps it simple. </p>
+
+<ul>
+<li>HTML</li>
+<li>CSS</li>
+<li>Javascript (optional)</li>
+</ul>
+
+<p>Because the cost of execution is low, you can rapidly explore and try new things. </p>
+</div>
+      <div class='step' >
+    
+<h1>Sidenote: using real partials in a LSG</h1>
+
+<p>Some LSG&#39;s grow to use markup partials from the larger codebase. This cancanabalize the speed in which you can work in the LSG. If the aim is to enforce conformity, I will have something goodies on that at the end of this talk...</p>
+</div>
+      <div class='step' >
+    
+<h1>Fast feedback loop</h1>
+
+<p>Designers and developers instantly see the design in-browser. 
+* Try in responsive (best win)
+* Quickly explore edge cases
+* Discover new awesomeness
+* Try it on your mobile
+* Handle touch events</p>
+</div>
+      <div class='step' >
+    
+<h1>Repsonsive! Responsive! Responsive!</h1>
+
+<p>It is soooo much easier to do this in browser. You begin to naturally understand and spot basic expansion behavors. Spend your time working on the really nifty stuff (like that super-awesome primary nav).</p>
+</div>
+      <div class='step' >
+    
+<h1>Pairing FTW</h1>
+
+<p>The best part, is that any team member can design spike in the LSG, when paired. As long as one of them is capable enough. Also great for knowledge transfer. </p>
+
+<ul>
+<li>Developer + Designer</li>
+<li>Designer + (code-savvy) Designer</li>
+<li>Developer + Product</li>
+<li>Prodcut + (code-savvy) Designer</li>
+</ul>
+</div>
+      <div class='step' >
+    
+<h1>Anecdote: a big front-end refactor</h1>
+
+<p>I&#39;ve been a part of a few large-scale SASS refactors in the last year, and one theme that keeps coming up is the pain felt by being chained to existing code. </p>
+
+<p>On one project, we attempted to refactor an existing SASS codebase that was 5+ years old. The experience:
+* A massive amount of tiny regressions we had to chase down. 
+* Reading and pulling apart the spaghetti SASS took FOREVER
+* A Rube Goldberg file structure ensued, with old and new intermingled and interconnected</p>
+</div>
+      <div class='step' >
+    
+<h1>The clean spot</h1>
+
+<p>After speaking with Nicole Sullivan (@nicolesullivan), I came to understand that trying to untangle the mess was taking waaaaayyyy longer than to just re-create the SASS from scratch. We basically &quot;spiked&quot; the refactored pieces directly into the Live Style Guide itself. </p>
+</div>
+      <div class='step' >
+    
+<h1>A quick SASS primer</h1>
+
+<p>To understand what makes it clean, you need to understand how your CSS makes it to the page. </p>
+
+<ul>
+<li>SASS (CSS) styling must work in harmony</li>
+<li>You may have many small SASS files, but generally they aggregate into one big one</li>
+<li>That big CSS file is then served to the user with the page</li>
+</ul>
+</div>
+      <div class='step' >
+    
+<h1>The clean spot</h1>
+
+<ol>
+<li>Create a new base CSS file that loads the other new ones</li>
+<li>Don&#39;t include ANY of the old stuff (except maybe variables files with colors)</li>
+<li>Load this instead of the old one your Live Style Gude (or possibly a second page of it)</li>
+<li>Build all the new things</li>
+<li>Profit!</li>
+</ol>
+</div>
+      <div class='step' >
+    
+<h1>LSG as a clean spot</h1>
+
+<p>This proved really effective. We rebuilt the buttons in an hour. We rebuit these &quot;card&quot; widgets (which had so many minor tweaks coming from all corners of the site) in an hour. We knew what everything did in responsive. We rebuilt the modals. We rebiult everything, one at a time.</p>
+</div>
+      <div class='step' >
+    
+<h1>The second new reason I love Live Style Guides</h1>
+
+<blockquote>
+<p>They&#39;re a great way to drive out a large refactor</p>
+</blockquote>
+</div>
+      <div class='step' >
+    
+<h1>Built your front-end from the ground-up</h1>
+
+<ul>
+<li>It takes too much time to untangle unsustainable CSS practices</li>
+<li>Refactor your design and throw away patterns you don&#39;t need anymore</li>
+<li>Instill good practices from the start</li>
+</ul>
+</div>
+      <div class='step' >
+    
+<h1>The map is not the terrain, and the pattern is not the page</h1>
+
+<p>Live Style Guides often only address repeatable patterns (buttons, widgets, tables, links, typography, etc.) Often, they never contain a representative page in full (fake) composition. Well...</p>
+</div>
+      <div class='step' >
+    
+<h1>Style Tile to the rescue!</h1>
+
+<p>A concept pioneered by Samantha Warren (@samanthatoy), the Style Tile is a fantastic way to drive out a site refactor. This is especially useful if you are switching frameworks or grid systems, or introducing responsive for the first time. </p>
+</div>
+      <div class='step' >
+    
+<h1>To create a Style Tile</h1>
+
+<p>All you need is another route in addition to the Live Style Guide. Developers will gladly help you add another route, as it is likely dependant on proficiency within the web stack architecture. Import your new base CSS file, and begin to create!</p>
+</div>
+      <div class='step' >
+    
+<h1>Sidenote</h1>
+
+<p>On new projects now, I always end up creating a Style Tile route, in addition to a Live Style Guide route. We (all of us) as designers need to see a design in composition to really understand how well it&#39;s going to work. Again, it is extremely useful for responsive exploration.</p>
+</div>
+      <div class='step' >
+    
+<h1>Large SASS refactor cheat-sheet</h1>
+
+<p>The TLDR; checklist!</p>
+
+<ol>
+<li>Set up your clean spot load path</li>
+<li>Set up your new Live Style Guide route</li>
+<li>Set up your new Style Tile route</li>
+<li>Pick a candidate page (I like the most-trafficked one)</li>
+<li>Spike the page directly into the new Style Tile</li>
+<li>Extract the patterns into the Style Guide as you go!</li>
+<li>Write stories to implement into site, switching their load paths one-by-one to the new CSS</li>
+</ol>
+</div>
+      <div class='step' >
+    
+<h1>Common complications</h1>
+
+<p>When you switch the CSS load path to the new clean spot, there are two common big pain points:
+1. Shared partials
+2. Libraries that generate markup (ex., Simple Form)</p>
+</div>
+      <div class='step' >
+    
+<h1>Shared partials</h1>
+
+<p>In order to DRY (Don&#39;t Repeat Yourself) out web codebases, it is a best practice to factor repeated instances of the same widget into the same partial that defines the widget. The downside to this, is that it couples all of the webpages together.</p>
+
+<p>I have tried or seen these attempted solutions:
+* Conforming your new CSS to old markup
+* Adding new markup classes to the partials, while leaving the old (perhaps leaving the overall structure in place)
+* Render &quot;new&quot; companion versions of the partials if in the new load path</p>
+
+<p>My favorite is the third, but we won&#39;t cover why here. </p>
+</div>
+      <div class='step' >
+    
+<h1>Libraries</h1>
+
+<p>SimpleForm (Rails) always bites me on this, but you may encounter it with any library that spits out markup. It&#39;s just a pain. Extra classes, in addition to the old ones, is the best way to go. You will have to conform to the structure it implies anyway. </p>
+</div>
+      <div class='step' >
+    
+<h1>Ok, so back to talk</h1>
+</div>
+      <div class='step' >
+    
+<h1>Remember what I said about using real partials in the LSG?</h1>
+
+<p>I mentioned earlier that I have seen teams work to make sure the markup partials in the Live Style Guide are the same partials that are used in the rest of the site. The big negative of this is that it makes it just as hard to develop in the LSG, as it does in the rest of the site. That is a downside because it locks out the modetately tech-savvy designers. It also decreases the cost of a Spike, because things just take longer. Finally, it is more inflexible to change because of dependancies across the site. </p>
+</div>
+      <div class='step' >
+    
+<h1>It&#39;s a noble desire</h1>
+
+<p>The idea behind this was to make sure that the site isn&#39;t doing it wrong. It also can be easier for re-use once it&#39;s all set up.</p>
+</div>
+      <div class='step' >
+    
+<h1>Visual regression testing</h1>
+
+<p>Catching visual regressions is sort of a difficult thing to nail down. The world of visual regression testing  is still in the bronze-age. The holy grail we all seek is to break the build when there is a visual regression. However, defining a visual regression is a difficult task.</p>
+
+<p>There are several approaches out there today:</p>
+</div>
+      <div class='step' >
+    
+<h1>Image-Difference</h1>
+
+<p>These tools compare a &quot;before&quot; and &quot;after&quot; screenshot of select pages, and alert you if the difference is big enough to warrent suspicion. In theory, they are great. However, I&#39;ve seen a few implementations, and they are generate so many false-positives that it becomes unusable. I think some are having success with them. Some of them are:
+* Wraith
+* Huxley
+* GreenOnion
+* Needle
+* CSSCritic</p>
+
+<p>A similar technique is frozen DOM comparisons (cssert)</p>
+</div>
+      <div class='step' >
+    
+<h1>Direct Assertion</h1>
+
+<p>Another approach is to assert directly against parts of the page. The downside to this is that you end up writing one (or more) tests for every line of CSS you write. That is fine, but CSS has lots of rules and if you change things around, odds are there will be lots of changed in the rendered DOM. Some of these tools are:
+* Cactus
+* Hardy</p>
+</div>
+      <div class='step' >
+    
+<h1>Linting</h1>
+
+<p>CSSLint, started by Nicholas C. Zakas and Nicole Sullivan, is one of the most well-known CSS tools. It does parses your rendered CSS for bad practices and can greatly help you avoid common no-no&#39;s. It can also catch serious bugs that you may not know about (like IE9&#39;s 4095 selector limit). But it&#39;s not really designed to tell you when you have a visual regression on a page.</p>
+</div>
+      <div class='step' >
+    
+<h1>The third (potential) new reason I love Live Style Guides</h1>
+
+<p>Which brings us to...</p>
+
+<blockquote>
+<p>They can be the basis for a test against the rest of the site</p>
+</blockquote>
+</div>
+      <div class='step' >
+    
+<h1>A new approach</h1>
+
+<p>At Pivotal Labs NYC, we have been working on a new approach to testing yor front-end. It looks at the patterns in your Live Style Guide and asserts their structure and style against the other parts of your site. </p>
+
+<p>If there is a regression from the &quot;whitelist&quot; of patterns, it will break the build. </p>
+
+<p>[DEMO]</p>
+</div>
+      <div class='step' >
+    
+<h1>If you&#39;re interested</h1>
+
+<p>We are looking for any project interested in trying this out and giving us feedback. The project is in it&#39;s infancy, and we are trying it out on it&#39;s second codebase now. </p>
+
+<p>The repo is at <a href="https://github.com/pivotal/style_cop">https://github.com/pivotal/style_cop</a></p>
+
+<p>Please clone it and try it! (Or mention it to someone who wants to try!)</p>
+</div>
+      <div class='step' >
+    
+<h1>So, let&#39;s re-define the Live Style Guide</h1>
+
+<blockquote>
+<p>The Live Style Guide isn&#39;t a china  your sandbox</p>
+</blockquote>
+
+<ul>
+<li>Your place to explore safely</li>
+<li>Your place to transfer front-end knowledge quickly</li>
+<li>Your place to spike</li>
+<li>Your place to fly!</li>
+</ul>
+</div>
+      <div class='step' >
+    
+<h2>Free your style guide</h2>
+
+<p>The one requirement to pull this off is the clean spot.</p>
+</div>
+      <div class='step' >
+    
+<h1>Anecdote #2: Going Responsive with a Style Tile</h1>
+
+<p>spike on brand new framework
+grid into style tile
+test out navigation</p>
+</div>
+      <div class='step' >
+    
+<h1>Loose bits</h1>
+
+<p>Anyone can work on it 
+Cross-learning is rapid because it&#39;s not as difficult to be proficient.</p>
+
+<h3>#1</h3>
+
+<blockquote>
+<p>It&#39;s not overly-coupled to the stack</p>
+</blockquote>
+
+<ul>
+<li>HTML, CSS and (maybe) Javascript are the keys</li>
+</ul>
+
+<h3>#2</h3>
+
+<blockquote>
+<p>It doesn&#39;t deal with implementation</p>
+</blockquote>
+
+<ul>
+<li>Punt on dealing with bad SASS practices that slow down implementation</li>
+<li>Fake out the data quickly by hand</li>
+<li>Explore edge-case values easily</li>
+</ul>
+
+<h3>#3</h3>
+
+<ul>
+<li>In Adobe tools, we may &quot;time-box&quot; ourselves to an hour of going down a path that might be &quot;crazy&quot;</li>
+<li>With clothing, we may dilebrately try something we are pretty sure will look rediculous</li>
+<li>When painting</li>
+</ul>
+
+<p>We give ourselves the leeway to iterate and cast unworkable solutions aside</p>
+
+<h2>The required setup</h2>
+
+<ul>
+<li>It should be oriented towards only CSS, HTML and (maybe) Javscript*</li>
+<li>It should load the SAME CSS load path as the site itself**</li>
+</ul>
+
+<p>**Sometimes, you may only include style-guide specific stuff in the style guide only, but I do not recommend this. You want to minimize suprises on implementation. If you&#39;re doing it right, you won&#39;t have much thats specific (stuff to render colors, the frame itself, etc). </p>
+
+<h2>Style tile</h2>
 
       </div>
     <script src="js/impress.js"></script>
