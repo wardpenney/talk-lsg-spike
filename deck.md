@@ -18,6 +18,10 @@ In the last year, I've been on several projects focused on the front-end, and I 
 
 ---
 
+# EXAMPLE Live Style Guides from web
+
+---
+
 # Original reasons (still good reasons)
 * A webpage that describes the typography, colors, patterns and widgets for a website
 * The system-of-record for front-end names of patterns and styles
@@ -73,11 +77,6 @@ It is important your Live Style Guide keeps it simple.
 * Javascript (optional)
 
 Because the cost of execution is low, you can rapidly explore and try new things. 
-
----
-
-# Sidenote: using real partials in a LSG
-Some LSG's grow to use markup partials from the larger codebase. This cancanabalize the speed in which you can work in the LSG. If the aim is to enforce conformity, I will have something goodies on that at the end of this talk...
 
 ---
 
@@ -198,6 +197,8 @@ When you switch the CSS load path to the new clean spot, there are two common bi
 ---
 
 # Shared partials
+Some LSG's grow to use markup partials from the larger codebase. This cancanabalize the speed in which you can work in the LSG. If the aim is to enforce conformity, I will have something goodies on that at the end of this talk...
+
 In order to DRY (Don't Repeat Yourself) out web codebases, it is a best practice to factor repeated instances of the same widget into the same partial that defines the widget. The downside to this, is that it couples all of the webpages together.
 
 I have tried or seen these attempted solutions:
