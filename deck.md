@@ -1,4 +1,7 @@
-# Rapid Design Exploration with Live Style Guides
+# Spike Lean Visual Design Directly into Your Live Style Guide
+* June 11, 2014
+* QCon New York
+* @wardpenney
 
 ---
 
@@ -14,11 +17,50 @@ In the last year, I've been on several projects focused on the front-end, and I 
 
 ---
 
-# Quick: what is Live Style Guide?
+# Who has worked with a Live Style Guide?
+* Product, design, engineering, executive, etc
+* Many companies use them in one way or another
 
 ---
 
-# EXAMPLE Live Style Guides from web
+### Development Style Guides
+* [NY Times: Objective-C for iOS](https://github.com/NYTimes/objective-c-style-guide)
+* [J-Query: contributing](http://contribute.jquery.org/style-guide/js/)
+* [Arduino: tutorial and example writing] (http://arduino.cc/en/Reference/StyleGuide)
+* [Google: all the things](https://code.google.com/p/google-styleguide/)
+
+---
+
+### Writing Style Guides
+* [Mailchimp: branded tone micro-copy](http://mailchimp.com/about/style-guide/)
+* [A List Apart: all things blogging](http://alistapart.com/about/style-guide)
+* [Buzzfeed: words, formatting, patterns](http://www.buzzfeed.com/emmyf/buzzfeed-style-guide)
+* [The Guardian](http://www.theguardian.com/guardian-observer-style-guide-a)
+
+---
+
+### Visual Style Guides
+* [Mozilla](https://www.mozilla.org/en-US/styleguide/identity/mozilla/branding/)
+* [Firefox OS](https://www.mozilla.org/en-US/styleguide/products/firefox-os/)
+
+---
+
+### Frontend Web Style Guides (a mix of all)
+* [Yelp](http://www.yelp.com/styleguide)
+* [Github](https://github.com/styleguide)
+* [Starbucks](http://www.starbucks.com/static/reference/styleguide/)
+
+---
+
+### There are many kinds
+
+---
+
+# Public Live Style Guides
+There are lots of kinds of style guides:
+
+* [Kickstarter](https://www.kickstarter.com/help/style_guide)
+* []()
 
 ---
 
