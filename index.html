@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>reveal.js - The HTML Presentation Framework</title>
+
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Hakim El Hattab">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/moon-2.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+      document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+
+        <section>
+          <h1>“IT’S ALIIIIIIVE!”</h1>
+          <h2>Frankenstein Grows Up</h2>
+          <h3>(using Living Style Guides)</h3>
+          <p>
+            <small>Pivotal Labs, July 2013</small>
+          </p>
+          <p>
+            <small><a href="twitter.com/wardpenney">@wardpenney</a></small>
+          </p>
+        </section>
+
+        <section>
+          <h2>What is style?</h2>
+          <img src="images/mcqueen-1.jpg" />
+          <img src="images/mcqueen-2.jpg" />
+          <aside class="notes">
+            Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+          </aside>
+        </section>
+
+        <section>
+          <h2>Style is consistentcy...</h2>
+          <img src="images/santorini.jpg" />
+        </section>
+
+        <section>
+          <h2>Style is recognizeability...</h2>
+          <img src="images/gangam-1.jpg" />
+        </section>
+
+        <section>
+          <h2>Even in its iterations...</h2>
+          <img src="images/gangam-baby.jpg" />
+        </section>
+
+        <section>
+          <h2>A Style Guide</h2>
+          <p>Is an inventory of standard style patterns</p>
+          <img src="images/google-sg.png" />
+        </section>
+
+        <section>
+          <h2>A Live Style Guide (LSG)</h2>
+          <p>In a "Live" web page you can hit with a browser</p>
+          <img src="images/github-lsg.png" />
+          </ul>
+        </section>
+
+        <section>
+          <p>How many of us have worked with one?</p>
+        </section>
+
+        <section>
+          <h2>#FAILS</h2>
+          <ul>
+            <li>It may <b>lag behind</b> the rest of the site and become obsolete</li>
+            <li>New designs <b>do not</b> reference the LSG</li>
+            <li>Maintenance sometimes feels <b>redundant</b> and <b>unimportant</b></li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Zombie LSG's!</h2>
+          <ul>
+            <li>It looks tattered</li>
+            <li>It has no heartbeat</li>
+          </ul>
+          <div>
+            <img src="images/zombie.jpg" />
+          </div>
+        </section>
+
+        <section>
+          <h2>We Want Living Style Guides!</h2>
+          <ul>
+            <li>Team members <b>refer to elements</b> in it by name</li>
+            <li>An integral part of the product <b>design process</b></li>
+          </ul>
+          <img src="images/constitution.jpg" />
+        </section>
+
+        <section>
+          <h2>So, what makes it living?</h2>
+          <p>Let's look at a hypothetical situation</p>
+        </section>
+
+        <section>
+          <h3>Welcome to uTrvl.com!</h3>
+          <p><i>The #1 site for travel plans just for u!</i></p>
+        </section>
+
+        <section>
+          <h2>LSG Happy Path</h2>
+          <p class="left author">Product Owner</p>
+          <blockquote class="left">
+            "FancyPantsAirlines has decided to partner on a Summer Beach Finder! Their API can let the user find air travel to the beaches on our lists. We're gonna share the cost on a 10% click-now coupon."
+          </blockquote>
+          <p class="right author2">UX Designer</p>
+          <blockquote class="right">
+            Let's use the <b>Thin Sidebar Layout</b>, with the <b>Main Map</b> loaded with most popular.
+          </blockquote>
+        </section>
+
+        <section>
+          <h2>LSG Happy Path</h2>
+          <p class="left author">Product Owner</p>
+          <blockquote class="left">
+            How about the <b>Coupon Interstitial</b> after a 3-second delay, with <b>Blurred Background</b> to create incentive with the coupon?
+          </blockquote>
+          <p class="right author2">UX Designer</p>
+          <blockquote class="right">
+            Yeah that will looks good. Ok, so we just need a new list of styled <b>Flight Times</b>?
+          </blockquote>
+          <p class="left author">Product Owner</p>
+          <blockquote class="left">
+            Looks like it. Let's story it up.
+          </blockquote>
+        </section>
+
+        <section>
+          <h2>The Stories</h2>
+          <ul class="spacey-list">
+            <li><em class="snout">Feature</em><em class="tail">Any Pair</em><br />As a User, I see the <b>Main Map</b> in the <b>Thin Sidebar Layout</b> with Most Popular places. </li>
+            <li><em class="snout">Feature</em><em class="tail">Any Pair</em><br />As a User on the SBF, I see the <b>Coupon Modal</b> after 3 seconds, with the <b>Blurred Background</b>.</li>
+            <li><em class="snout">Chore</em><em class="tail">Design + Dev</em><br />As a Dev in the LSG, I see a representation of the <b>Flight Times List</b>.</li>
+            <li><em class="snout">Feature</em><em class="tail">Any Pair</em><br />As a User on the SBF, I see Partner <b>Flight Times List</b></li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>What went right here?</h2>
+          <ul>
+            <li>Tactful <b>reuse</b> of existing elements</li>
+            <li>Widgets already <b>first-class</b> quality</li>
+            <li>Widgets and layout already <b>responsive</b></li>
+            <li>Using <b>terminology</b> of widgets</li>
+            <li>No team member bottlenecks</li>
+            <li><b>No mocks</b> for it (design / dev pair did it)</li>
+            <li>No visual acceptance handoff snags (<b>already done</b> in pair)</li>
+          </ul>
+        </section>
+
+        <section>
+          <p>The Living Style Guide represents a</p>
+          <h2>change in process</h2>
+        </section>
+
+        <section>
+          <h2>Website Style is built by the team</h2>
+          <p>Every memeber ends up implementing design <br /><b>(and making design decisions)</b></p>
+          <img src="images/construction-workers.jpg" />
+        </section>
+
+        <section>
+          <h2 class="left">The <b>closer</b> design gets <br />to engineering<br />the <b>better</b></h2>
+          <ul>
+            <li>More time is spent <b>polishing</b>, and less documenting</li>
+            <li>Layout count and complexity decreases (no snowflakes)</li>
+            <li>Designers don't pull <b>late-nighters</b> constantly</li>
+            <li>Acceptance handoffs are <b>smoother</b> with less rejections and visual bugs</li>
+            <li>Responsiveness <b>from the start</b></li>
+            <li>When combined, design and engineering talent create <b>novel interactions</b></li>
+            <li>Pairing disseminates design <b>talent</b> into team</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>The Requirements of an LSG</h2>
+          <ul>
+            <li>It has to be a <b>simple stack</b> of HTML (HAML), CSS (SASS) and maybe Javascript</li>
+            <li>It must include the <b>EXACT</b> same CSS from the main site</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Action Items - New Project</h2>
+          <p>Create Chores to start out with some basics. Look over the mocks (if available) and look for <b>patterns</b></p>
+          <ul>
+            <li>Colors</li>
+            <li>Typography</li>
+            <li>Buttons</li>
+            <li>Borders</li>
+            <li>Rules</li>
+            <li>Widgets</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Action Items - Ongoing</h2>
+          <p></p>
+          <ul>
+            <li>Make sure your designs attempt to <b>reuse</b> components (it's <b>OK</b> to make new things! just be aware of it!)</li>
+            <li><b>Refactor and poish</b> your elements as you implement them from the LSG. Make them strong!</li>
+            <li>Use the <b>terminology</b> from the LSG within the team</li>
+            <li>Use LSG-only <b>chores</b> where appropraite</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Yes, LSG-only stories are chores</h2>
+          <p class="left author">No Double-Jeopardy</p>
+          <ul>
+            <li>It is a Chore. The Acceptance will happen when the features are implemented for the user.</li>
+          </ul>
+          <p class="left author">Design + Dev pairing</p>
+          <ul>
+            <li>Required to eliminate acceptance handoff</li>
+            <li>Amazingly fun for both the engineer and the designer</li>
+          </ul>
+          <p class="left author">Product + Dev pairing</p>
+          <ul>
+            <li>Yes this is a thing. Often, the Product Owner will be signing off on designs implemented in browser. This is a great way to elmininate an early handoff.</li>
+            <li>Product may also tri-pair near before a pair Finishes the story</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>When is a Story not just a Chore?</h2>
+        </section>
+
+        <section>
+          <h2>When it's implemented with the feature</h2>
+          <ul>
+            <li>When a pair says "We can't do that, because it's <b>blocked on the LSG Chore</b>"</li>
+            <li>STOP! <b>Delete the chore</b> and merge it into the feature story.</li>
+            <li>Designer should can <b>tri-pair</b> when the feature story nears finish (before deliver)</li>
+            <li>The LSG should have <b>momentum</b>, and the frontend codepase patterns set</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>We walk a fine line</h2>
+          <ul>
+            <li>Ideas vs Implementation</li>
+            <li>Straightforward vs Hacked</li>
+            <li>Pattern vs Novel</li>
+          </ul>
+          <img src="images/fine-line.jpg" />
+        </section>
+
+        <section>
+          <h2>Style Guide Tools</h2>
+          <ul>
+            <li>Style Guide<a href="https://github.com/pivotalexperimental/style-guide">Pivotal Style Guide Gem</a></li>
+            <li>CSS Documentation to Style Guide<a href="http://warpspire.com/posts/kss/">KSS</a>
+            <li>CSS Documentation to Style Guide<a href="http://jacobrask.github.io/styledocco/">Style Docco</a>
+            <li>KSS fork (looks better)<a href="http://nadarei.co/nkss-rails/">Nadarei KSS</a>
+            <li><a href="http://uxmag.com/articles/anchoring-your-design-language-in-a-live-style-guide">anchoring-your-design-language-in-a-live-style-guide - Jim Lindstrom</a>
+            <li>CSS Documentation to Style Guide<a href="http://kaleistyleguide.com/">Kalei Style Guide</a>
+            <li><a href="http://www.youtube.com/watch?v=oHg5SJYRHA0">Roll Your Own!</a>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Use a Living Style Guide to:</h2>
+          <ul>
+            <li>Give you time to <b>polish</b></li>
+            <li>Give you time to <b>innovate</b></li>
+            <li>Enable <b>the team</b></li>
+          </ul>
+          <br />
+          <br />
+          <br />
+          <h2>Thank you!</h2>
+          <p>
+            <a href="twitter.com/wardpenney">@wardpenney</a>
+          </p>
+        </section>
+
+        <section>
+          <h2>Links</h2>
+          <ul>
+            <li><a href="http://abduzeedo.com/branding-google-visual-assets-guidelines">Branding Google Visual Guidelines<a/></li>
+            <li><a href="https://github.com/styleguide">Github Style Guide<a/></li>
+          </ul>
+          <br />
+          <h2>Images</h2>
+          <ul>
+            <li>http://www.flickr.com/photos/synaes/5721938624</li>
+            <li>http://www.flickr.com/photos/synaes/5721939248</li>
+            <li>http://www.flickr.com/photos/blueyeda73/4111133224</li>
+            <li>http://www.flickr.com/photos/shebalso/121839235</li>
+            <li>http://www.flickr.com/photos/53558245@N02/4978362207</li>
+            <li>http://www.flickr.com/photos/texmetz/3200472130/</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+
+    <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+          // { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+          // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+
+    </script>
+
+  </body>
+</html>
