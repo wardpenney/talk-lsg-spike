@@ -408,88 +408,106 @@
         </section>
 
         <section>
-<h2>Lots of approaches:</h2>
-
-<p>There are several approaches out there today:
-* Image-difference
-* Direct assertion
-* Linting</p>
+          <h2>Lots of approaches:</h2>
+          <p>There are several approaches out there today:</p>
+          <ul>
+            <li>Image-difference</li>
+            <li>Direct assertion</li>
+            <li>Linting</li>
+          </ul>
         </section>
 
         <section>
-
-<h3>Image-difference</h3>
-
-<p>These tools compare a "before" and "after" screenshot of select pages, and alert you if the difference is big enough to warrent suspicion. In theory, they are great. However, I've seen a few implementations, and they are generate so many false-positives that it becomes unusable. I think some are having success with them. Some of them are:
-* Wraith
-* Huxley
-* GreenOnion
-* Needle
-* CSSCritic</p>
-
-<p>A similar technique is frozen DOM comparisons (cssert)</p>
-
+          <h2>Image-difference</h2>
+          <p>Before vs. after screenshot of select pages</p>
+          <ul>
+            <li>Wraith</li>
+            <li>Huxley</li>
+            <li>GreenOnion</li>
+            <li>Needley</li>
+            <li>CSSCritic</li>
+          </ul>
         </section>
 
         <section>
-        <h3>Direct Assertion</h3>
-
-<p>Another approach is to assert directly against parts of the page. The downside to this is that you end up writing one (or more) tests for every line of CSS you write. That is fine, but CSS has lots of rules and if you change things around, odds are there will be lots of changed in the rendered DOM. Some of these tools are:
-* Cactus
-* Hardy</p>
+          <h2>Direct Assertion</h2>
+          <p>Assert against nored on the page.</p>
+          <ul>
+            <li>Cactus</li>
+            <li>Hardy</li>
+          </ul>
         </section>
 
         <section>
-<h3>Linting</h3>
+          <h2>Linting</h2>
 
-<p>CSSLint, started by Nicholas C. Zakas and Nicole Sullivan, is one of the most well-known CSS tools. It does parses your rendered CSS for bad practices and can greatly help you avoid common no-no's. It can also catch serious bugs that you may not know about (like IE9's 4095 selector limit). But it's not really designed to tell you when you have a visual regression on a page.</p>
-
+          <p>CSSLint, by Nicholas C. Zakas and Nicole Sullivan</p>
+          <img src="images/css-lint.png" />
         </section>
 
         <section>
-<h3>A new approach</h3>
-
-<p>At Pivotal Labs NYC, we have been working on a new approach to testing yor front-end. It looks at the patterns in your Live Style Guide and asserts their structure and style against the other parts of your site. </p>
-
-<p>If there is a regression from the "whitelist" of patterns, it will break the build. </p>
-
+          <h2>A new hope</h2>
+          <ul>
+            <li>Whitelist patterns in your Style Guide</li>
+            <li>Treat them as "green"</li>
+            <li>Assert patterns against the site</li>
+          </ul>
         </section>
 
         <section>
-<h4>If you're interested</h4>
-
-<p>We are looking for any project interested in trying this out and giving us feedback. The project is in it's infancy, and we are trying it out on it's second codebase now. </p>
-
-<p>The repo is at https://github.com/pivotal/style_cop</p>
-
-<p>Please clone it and try it! (Or mention it to someone who wants to try!)</p>
-
+          <h1><a href="https://github.com/pivotal/style_cop">style_cop</a></h1>
+          <h2>If you're interested</h2>
         </section>
 
         <section>
-
-<h1>So, let's re-define the Live Style Guide</h1>
-
-<blockquote>
-  <p>The Live Style Guide isn't a china  your sandbox</p>
-</blockquote>
-
-<ul>
-<li>Your place to explore safely</li>
-<li>Your place to transfer front-end knowledge quickly</li>
-<li>Your place to spike</li>
-<li>Your place to fly!</li>
-</ul>
-
+          <h2>An example test</h2>
+          <pre>
+          context "some context", style_cop: true do
+            it "tests something" do
+              visit "/homepage"
+              pattern = page.find(".hero")
+              <b>expect(selector).to match_styleguide("/style")</b>
+            end
+          end</pre>
         </section>
-
 
         <section>
-<h2>Free your style guide</h2>
-
-<p>The one requirement to pull this off is the clean spot.</p>
+          <h4>The Live Style Guide becomes the <b>green</b></h4>
+          <h3>Your implementation is the <b>red</b></h3>
         </section>
 
+        <section>
+          <h2>Re-define of Live Style Guide</h2>
+          <blockquote>
+            <p>The Live Style Guide isn't fine china, it's your sandbox</p>
+          </blockquote>
+        </section>
+
+        <section>
+          <h2>It is now...</h2>
+          <ul>
+            <li>Your place to explore safely</li>
+            <li>Your place to transfer front-end knowledge quickly</li>
+            <li>Your place to Spike</li>
+            <li>Your place to begin anew!</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Free your style guide</h2>
+          <img src="images/eagle.jpg" />
+        </section>
+
+        <section>
+          <h1>Thank You!</h1>
+          <ul>
+            <li><a href="http://twitter.com/wardpenney">@wardpenney</a></li>
+            <li><a href="http://github.com/pivotal/style_cop">style_cop Github</a></li>
+            <li><a href="http://github.com/wardpenney/talk-lsg-spike">This talk slides</a></li>
+            <li><a href="http://github.com/wardpenney/styleguide-styletile-example">The example project</a></li>
+            <li><a href="https://github.com/wardpenney/middleman-bourbon-hologram">Starter project with Middleman, Hologram and Bourbon</a></li>
+          </ul>
+        </section>
       </div>
     </div>
 
