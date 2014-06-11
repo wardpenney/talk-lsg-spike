@@ -261,101 +261,96 @@
         </section>
 
         <section>
-<h2>One method</h2>
-
-<p>After speaking with Nicole Sullivan (@nicolesullivan), I came to understand that trying to untangle the mess was taking waaaaayyyy longer than to just re-create the SASS from scratch. We basically Spiked the refactored pieces directly into the Live Style Guide itself.</p>
-        </section>
-
-        <section>
-<h3>The clean spot</h3>
-
-<p>In order to Spike the new frontend, we needed a place to work. </p>
-
-<ol>
-<li>Create a new base CSS file that loads the other new ones</li>
-<li>Don't include ANY of the old stuff (except maybe variables files with colors)</li>
-<li>Load this instead of the old one your Live Style Gude (or possibly a second page of it)</li>
-<li>Build all the new things</li>
-</ol>
-        </section>
-
-        <section>
-<h4>A quick SASS primer</h4>
-
-<p>To understand what makes it clean, you need to understand how your CSS makes it to the page. </p>
-
-<ul>
-<li>SASS (CSS) styling must work in harmony</li>
-<li>You may have many small SASS files, but generally they aggregate into one big one</li>
-<li>That big CSS file is then served to the user with the page</li>
-</ul>
-        </section>
-
-        <section>
-<h4>Example: File structure for current app</h4>
-        </section>
-
-        <section>
-<h3>The map is not the terrain, and the pattern is not the page</h3>
-
-<p>Live Style Guides often only address repeatable patterns (buttons, widgets, tables, links, typography, etc.) Often, they never contain a representative page in full (fake) composition. Well...</p>
-
-        </section>
-
-        <section>
-<h4>Style Tile to the rescue!</h4>
-
-<p>A concept pioneered by Samantha Warren (@samanthatoy), the Style Tile is a fantastic way to drive out a site refactor. This is especially useful if you are switching frameworks or grid systems, or introducing responsive for the first time.</p>
-        </section>
-
-        <section>
-<h5>Example: Style Tile</h5>
-        </section>
-
-        <section>
-        <h5>To create a Style Tile</h5>
-
-<p>All you need is another route in addition to the Live Style Guide. Developers will gladly help you add another route, as it is likely dependant on proficiency within the web stack architecture. Import your new base CSS file, and begin to create!</p>
-        </section>
-
-        <section>
-        <h5>Sidenote</h5>
-
-<p>On new projects now, I always end up creating a Style Tile route, in addition to a Live Style Guide route. We (all of us) as designers need to see a design in composition to really understand how well it's going to work. Again, it is extremely useful for responsive exploration.</p>
-        </section>
-
-        <section>
-          <h2>Large SASS refactor cheat-sheet</h2>
-
-          <p>The TLDR; checklist!</p>
-
+          <h2>The clean spot method</h2>
+          <p>Idea from <a href="twitter.com/nicolesullivan">@NicoleSullivan</a></p>
           <ol>
-          <li>Set up your clean spot load path</li>
-          <li>Set up your new Live Style Guide route</li>
-          <li>Set up your new Style Tile route</li>
-          <li>Pick a candidate page (I like the most-trafficked one)</li>
-          <li>Spike the page directly into the new Style Tile</li>
-          <li>Extract the patterns into the Style Guide as you go!</li>
-          <li>Write stories to implement into site, switching their load paths one-by-one to the new CSS</li>
+            <li>Create a <b>new CSS</b> load path</li>
+            <li>Include relevent variables (colors, typeface)</li>
+            <li>Select a few representative pages</li>
+            <li>Build all the new things</li>
           </ol>
         </section>
 
         <section>
-        <h3>Built your front-end from the ground-up</h3>
-
-<ul>
-<li>It takes too much time to untangle unsustainable CSS practices</li>
-<li>Refactor your design and throw away patterns you don't need anymore</li>
-<li>Instill good practices from the start</li>
-</ul>
+          <h2>A problem for design</h3>
+          <h3>The map is not the terrain, <br />the pattern is not the page.</h3>
         </section>
 
         <section>
-        <h2>Common complications</h2>
+          <h2><a href="http://getbootstrap.com/css/#buttons">Bootstrap Buttons</a></h3>
+          <img src="images/bootstrap-buttons.png" />
+        </section>
 
-<p>When you switch the CSS load path to the new clean spot, there are two common big pain points:
-1. Shared partials
-2. Libraries that generate markup (ex., Simple Form)</p>
+        <section>
+          <h2>Lost in a supermarket</h3>
+          <img src="images/supermarket-shelf.jpg" />
+        </section>
+
+        <section>
+          <h2>VS this</h3>
+          <img src="images/food-quail.jpg" />
+        </section>
+
+        <section>
+          <h2>The map is not the terrain</h2>
+          <h3>The <b>pattern</b> is not the <b>page</b>.</h3>
+        </section>
+
+        <section>
+            <h2>Style Tile to the rescue!</h2>
+            <img src="images/tile-ward.png" />
+        </section>
+
+        <section>
+            <h2><a href="http://styletil.es/">Style Tile</a></h2>
+            <p>Pioneered by Samantha Warren <a href="twitter.com/samanthatoy">@samanthatoy</a></p>
+            <p>I use it to <b>drive out a site refactor</b>.</p>
+        </section>
+
+        <section>
+          <h2>A quick SASS primer</h2>
+          <ul>
+            <li>SASS (CSS) styling must work in harmony</li>
+            <li>You may have many small SASS files, but generally they aggregate into a file, and onto the page</li>
+          </ul>
+        </section>
+
+        <section>
+          <img src="images/file-structure.png" />
+        </section>
+
+        <section>
+          <h2>Link from your LSG</h2>
+          <img src="images/ward-lsg-2.png" />
+        </section>
+
+        <section>
+          <h2>Large SASS refactor cheat-sheet</h2>
+          <ol>
+            <li>Set up your clean spot load path</li>
+            <li>Set up your new Live Style Guide route</li>
+            <li>Set up your new Style Tile route</li>
+            <li>Pick a candidate page (I like the most-trafficked one)</li>
+            <li>Spike the page directly into the new Style Tile</li>
+            <li>Extract the patterns into the Style Guide as you go!</li>
+            <li>Write stories to implement into site, switching their load paths one-by-one to the new CSS</li>
+          </ol>
+        </section>
+
+        <section>
+          <h3>Built your front-end from the ground-up</h3>
+          <ul>
+            <li>It takes too much time to untangle unsustainable CSS practices</li>
+            <li>Refactor your design and throw away patterns you don't need anymore</li>
+            <li>Instill good practices from the start</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Common complications</h2>
+            <p>When you switch the CSS load path to the new clean spot, there are two common big pain points:
+            1. Shared partials
+            2. Libraries that generate markup (ex., Simple Form)</p>
         </section>
 
         <section>
