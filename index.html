@@ -338,7 +338,7 @@
         </section>
 
         <section>
-          <h3>Built your front-end from the ground-up</h3>
+          <h3>Build your front-end from the ground-up</h3>
           <ul>
             <li>It takes too much time to untangle unsustainable CSS practices</li>
             <li>Refactor your design and throw away patterns you don't need anymore</li>
@@ -348,50 +348,63 @@
 
         <section>
           <h2>Common complications</h2>
-            <p>When you switch the CSS load path to the new clean spot, there are two common big pain points:
-            1. Shared partials
-            2. Libraries that generate markup (ex., Simple Form)</p>
+            <p>When you switch the CSS load path to the new clean spot, there are two common big pain points:</p>
+            <ol>
+              <li>Shared templates</li>
+              <li>Libraries that generate markup</li>
+            </ol>
         </section>
 
         <section>
-          <h4>A note on shared partials</h4>
-
-          <p>I've seen some teams attempt to use "shared partials" for the components in their LSG. However, this canniballizes the low cost of execution by:</p>
-
+          <h2>Shared templates in the LSG</h2>
+          <p>Canniballize the low cost of execution</p>
           <ul>
-          <li>increasing the difficulty of a Spike</li>
-          <li>requiring more knowledge of the whole stack</li>
-          <li>coupling the LSG to the site, making it inflexible</li>
+            <li>increase the difficulty of a Spike</li>
+            <li>require more knowledge of the whole stack</li>
+            <li>couple the LSG to the site, making it inflexible</li>
           </ul>
         </section>
 
         <section>
-<h3>Shared partials</h3>
-
-<p>Some LSG's grow to use markup partials from the larger codebase. This cancanabalize the speed in which you can work in the LSG. If the aim is to enforce conformity, I will have something goodies on that at the end of this talk...</p>
-
-<p>In order to DRY (Don't Repeat Yourself) out web codebases, it is a best practice to factor repeated instances of the same widget into the same partial that defines the widget. The downside to this, is that it couples all of the webpages together.</p>
-
-<p>I have tried or seen these attempted solutions:
-* Conforming your new CSS to old markup
-* Adding new markup classes to the partials, while leaving the old (perhaps leaving the overall structure in place)
-* Render "new" companion versions of the partials if in the new load path</p>
-
-<p>My favorite is the third, but we won't cover why here. </p>
-
+          <h2>Dealing with shared templates</h2>
+          <p>I have tried or seen these attempted solutions:</p>
         </section>
 
         <section>
-<h3>Libraries</h3>
-
-<p>SimpleForm (Rails) always bites me on this, but you may encounter it with any library that spits out markup. It's just a pain. Extra classes, in addition to the old ones, is the best way to go. You will have to conform to the structure it implies anyway. </p>
+          <h2>Conform your new CSS to old markup (gross)</h2>
+          <p>Really hard and you don't get the benefit of refactoring. Perpetuates old practices</p>
         </section>
 
         <section>
+          <h2>Render "new" versions of the templates</h2>
+          <ul>
+            <li>Awesome, if you can pull it off</li>
+            <li>Frees you from old junk</li>
+            <li>Fastest refactor when pattern in place</li>
+          </ul>
+        </section>
 
-<h1>It could (potentially) aid with visual tests</h1>
+        <section>
+          <h2>Libraries that generate markup</h2>
+          <p>SimpleForm (Rails) always bites me on this...</p>
+        </section>
 
-<p>Catching visual regressions is sort of a difficult thing to nail down. The world of visual regression testing  is still in the bronze-age. The holy grail we all seek is to break the build when there is a visual regression. However, defining a visual regression is a difficult task.</p>
+        <section>
+          <h2>Additional classes for libraries</h2>
+          <ul>
+            <li>Best when markup is small (form fields)</li>
+            <li>Keeps old structure in place</li>
+            <li>Runs in both old and new load paths</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>#3 Aid with regression testing</h2>
+        </section>
+
+        <section>
+          <h2>Visual testing today: <br />The bronze age</h2>
+          <img src="images/bronze-age.jpg" />
         </section>
 
         <section>
